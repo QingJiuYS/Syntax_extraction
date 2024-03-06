@@ -1,0 +1,23 @@
+[
+    "hf_dccp_srcport",
+    "hf_dccp_dstport",
+    "hf_dccp_data_offset",
+    "hf_dccp_ccval",
+    "hf_dccp_cscov",
+    "hf_dccp_checksum",
+    "hf_dccp_res1",
+    "hf_dccp_type",
+    "hf_dccp_x",
+    "hf_dccp_res2",
+    "hf_dccp_seq_abs",
+    "hf_dccp_service_code",
+    "data_type_field",
+    "hf_dccp_ack_res",
+    "hf_dccp_ack",
+    "hf_dccp_ack_abs",
+    "hf_dccp_reset_code",
+    "hf_dccp_data1",
+    "hf_dccp_data2",
+    "hf_dccp_data3",
+    "hf_dccp_seq"
+]

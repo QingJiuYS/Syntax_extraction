@@ -1,0 +1,3417 @@
+[
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res2",
+            "field_vari_name": "dccph->reserved2",
+            "field_offset": "offset",
+            "field_length": 1,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res2",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq_abs",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 6,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_name": "Sequence Number (raw)",
+            "field_filter_name": "dccp.seq_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_service_code",
+            "field_vari_name": "dccph->service_code",
+            "field_offset": "offset",
+            "field_length": 4,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x0",
+                "0xA"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Service Code",
+            "field_filter_name": "dccp.service_code",
+            "field_type": "FT_UINT32",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_service_code_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res2",
+            "field_vari_name": "dccph->reserved2",
+            "field_offset": "offset",
+            "field_length": 1,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res2",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq_abs",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 6,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_name": "Sequence Number (raw)",
+            "field_filter_name": "dccp.seq_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_res",
+            "field_vari_name": "dccph->ack_reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x1"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.ack_res",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack",
+            "field_vari_name": " ack",
+            "field_offset": "offset + 2",
+            "field_length": 6,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x1"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ],
+                [
+                    "(dccp_relative_seq) && (dccpd->rev->static_flags & DCCP_S_BASE_SEQ_SET)",
+                    "true"
+                ]
+            ],
+            "field_name": "Acknowledgement Number",
+            "field_filter_name": "dccp.ack",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_abs",
+            "field_vari_name": " dccph->ack",
+            "field_offset": "offset + 2",
+            "field_length": 6,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x1"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_name": "Acknowledgement Number (raw)",
+            "field_filter_name": "dccp.ack_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_service_code",
+            "field_vari_name": "dccph->service_code",
+            "field_offset": "offset",
+            "field_length": 4,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x1"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Service Code",
+            "field_filter_name": "dccp.service_code",
+            "field_type": "FT_UINT32",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_service_code_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res2",
+            "field_vari_name": "dccph->reserved2",
+            "field_offset": "offset",
+            "field_length": 1,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res2",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq_abs",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 6,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_name": "Sequence Number (raw)",
+            "field_filter_name": "dccp.seq_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_name": "There is no Field!",
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x2"
+            ]
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res2",
+            "field_vari_name": "dccph->reserved2",
+            "field_offset": "offset",
+            "field_length": 1,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res2",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq_abs",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 6,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_name": "Sequence Number (raw)",
+            "field_filter_name": "dccp.seq_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_res",
+            "field_vari_name": "dccph->ack_reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x3",
+                "0x4"
+            ],
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ],
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.ack_res",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_abs",
+            "field_vari_name": " dccph->ack",
+            "field_offset": "offset + 2",
+            "field_length": 6,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x3",
+                "0x4"
+            ],
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ],
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_name": "Acknowledgement Number (raw)",
+            "field_filter_name": "dccp.ack_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res2",
+            "field_vari_name": "dccph->reserved2",
+            "field_offset": "offset",
+            "field_length": 1,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res2",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq_abs",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 6,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_name": "Sequence Number (raw)",
+            "field_filter_name": "dccp.seq_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_res",
+            "field_vari_name": "dccph->ack_reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.ack_res",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_abs",
+            "field_vari_name": " dccph->ack",
+            "field_offset": "offset + 1",
+            "field_length": 3,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_name": "Acknowledgement Number (raw)",
+            "field_filter_name": "dccp.ack_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_reset_code",
+            "field_vari_name": "dccph->reset_code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Reset Code",
+            "field_filter_name": "dccp.reset_code",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_reset_code_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data1",
+            "field_vari_name": "dccph->data1",
+            "field_offset": "offset + 1",
+            "field_length": 1,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Data 1",
+            "field_filter_name": "dccp.data1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data2",
+            "field_vari_name": "dccph->data2",
+            "field_offset": "offset + 2",
+            "field_length": 1,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Data 2",
+            "field_filter_name": "dccp.data2",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data3",
+            "field_vari_name": "dccph->data3",
+            "field_offset": "offset + 3",
+            "field_length": 1,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Data 3",
+            "field_filter_name": "dccp.data3",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res2",
+            "field_vari_name": "dccph->reserved2",
+            "field_offset": "offset",
+            "field_length": 1,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res2",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq_abs",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 6,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_name": "Sequence Number (raw)",
+            "field_filter_name": "dccp.seq_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_res",
+            "field_vari_name": "dccph->ack_reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x5",
+                "0x6",
+                "0x8",
+                "0x9"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.ack_res",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_abs",
+            "field_vari_name": " dccph->ack",
+            "field_offset": "offset + 1",
+            "field_length": 3,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x5",
+                "0x6",
+                "0x8",
+                "0x9"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_name": "Acknowledgement Number (raw)",
+            "field_filter_name": "dccp.ack_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res2",
+            "field_vari_name": "dccph->reserved2",
+            "field_offset": "offset",
+            "field_length": 1,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res2",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq_abs",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 6,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "true"
+                ]
+            ],
+            "field_name": "Sequence Number (raw)",
+            "field_filter_name": "dccp.seq_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_name": "There is no Field!",
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": []
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 3,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "false"
+                ]
+            ],
+            "field_name": "Sequence Number",
+            "field_filter_name": "dccp.seq",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_service_code",
+            "field_vari_name": "dccph->service_code",
+            "field_offset": "offset",
+            "field_length": 4,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x0",
+                "0xA"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Service Code",
+            "field_filter_name": "dccp.service_code",
+            "field_type": "FT_UINT32",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_service_code_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 3,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "false"
+                ]
+            ],
+            "field_name": "Sequence Number",
+            "field_filter_name": "dccp.seq",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_res",
+            "field_vari_name": "dccph->ack_reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x1"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.ack_res",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack",
+            "field_vari_name": " ack",
+            "field_offset": "offset + 2",
+            "field_length": 6,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x1"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ],
+                [
+                    "(dccp_relative_seq) && (dccpd->rev->static_flags & DCCP_S_BASE_SEQ_SET)",
+                    "true"
+                ]
+            ],
+            "field_name": "Acknowledgement Number",
+            "field_filter_name": "dccp.ack",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_abs",
+            "field_vari_name": " dccph->ack",
+            "field_offset": "offset + 2",
+            "field_length": 6,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x1"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_name": "Acknowledgement Number (raw)",
+            "field_filter_name": "dccp.ack_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_service_code",
+            "field_vari_name": "dccph->service_code",
+            "field_offset": "offset",
+            "field_length": 4,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x1"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Service Code",
+            "field_filter_name": "dccp.service_code",
+            "field_type": "FT_UINT32",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_service_code_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 3,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "false"
+                ]
+            ],
+            "field_name": "Sequence Number",
+            "field_filter_name": "dccp.seq",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_name": "There is no Field!",
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x2"
+            ]
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 3,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "false"
+                ]
+            ],
+            "field_name": "Sequence Number",
+            "field_filter_name": "dccp.seq",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_res",
+            "field_vari_name": "dccph->ack_reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x3",
+                "0x4"
+            ],
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "false"
+                ],
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.ack_res",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_abs",
+            "field_vari_name": " dccph->ack",
+            "field_offset": "offset + 1",
+            "field_length": 3,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x3",
+                "0x4"
+            ],
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "false"
+                ],
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_name": "Acknowledgement Number (raw)",
+            "field_filter_name": "dccp.ack_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 3,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "false"
+                ]
+            ],
+            "field_name": "Sequence Number",
+            "field_filter_name": "dccp.seq",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_res",
+            "field_vari_name": "dccph->ack_reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.ack_res",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_abs",
+            "field_vari_name": " dccph->ack",
+            "field_offset": "offset + 1",
+            "field_length": 3,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_name": "Acknowledgement Number (raw)",
+            "field_filter_name": "dccp.ack_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_reset_code",
+            "field_vari_name": "dccph->reset_code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Reset Code",
+            "field_filter_name": "dccp.reset_code",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_reset_code_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data1",
+            "field_vari_name": "dccph->data1",
+            "field_offset": "offset + 1",
+            "field_length": 1,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Data 1",
+            "field_filter_name": "dccp.data1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data2",
+            "field_vari_name": "dccph->data2",
+            "field_offset": "offset + 2",
+            "field_length": 1,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Data 2",
+            "field_filter_name": "dccp.data2",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data3",
+            "field_vari_name": "dccph->data3",
+            "field_offset": "offset + 3",
+            "field_length": 1,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x7"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_NA",
+            "field_name": "Data 3",
+            "field_filter_name": "dccp.data3",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 3,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "false"
+                ]
+            ],
+            "field_name": "Sequence Number",
+            "field_filter_name": "dccp.seq",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_res",
+            "field_vari_name": "dccph->ack_reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x5",
+                "0x6",
+                "0x8",
+                "0x9"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.ack_res",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ack_abs",
+            "field_vari_name": " dccph->ack",
+            "field_offset": "offset + 1",
+            "field_length": 3,
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": [
+                "0x5",
+                "0x6",
+                "0x8",
+                "0x9"
+            ],
+            "if_dependence": [
+                [
+                    "tree",
+                    "true"
+                ]
+            ],
+            "field_name": "Acknowledgement Number (raw)",
+            "field_filter_name": "dccp.ack_raw",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ],
+    [
+        {
+            "field_identifier": "hf_dccp_srcport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Source Port",
+            "field_filter_name": "dccp.srcport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_dstport",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_endian": "ENC_BIG_ENDIAN",
+            "field_name": "Destination Port",
+            "field_filter_name": "dccp.dstport",
+            "field_type": "FT_UINT16",
+            "field_base": "BASE_PT_DCCP",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_data_offset",
+            "field_vari_name": "dccph->data_offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_endian": "ENC_NA",
+            "field_name": "Data Offset",
+            "field_filter_name": "dccp.data_offset",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_ccval",
+            "field_vari_name": "dccph->ccval",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xF0",
+            "field_endian": "ENC_NA",
+            "field_name": "CCVal",
+            "field_filter_name": "dccp.ccval",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_cscov",
+            "field_vari_name": "dccph->cscov",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x0F",
+            "field_endian": "ENC_NA",
+            "field_name": "Checksum Coverage",
+            "field_filter_name": "dccp.cscov",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_checksum",
+            "field_offset": "offset",
+            "field_endian": "ENC_BIG_ENDIAN",
+            "if_dependence": [
+                [
+                    "dccp_check_checksum && !pinfo->fragmented && len >= csum_coverage_len",
+                    "true"
+                ]
+            ],
+            "field_name": "Checksum",
+            "field_filter_name": "dccp.checksum",
+            "field_type": "FT_UINT16",
+            "field_length": 2,
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_res1",
+            "field_vari_name": "dccph->reserved1",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0xE0",
+            "field_endian": "ENC_NA",
+            "field_name": "Reserved",
+            "field_filter_name": "dccp.res1",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_HEX",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_type",
+            "field_vari_name": "dccph->type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x1E",
+            "field_endian": "ENC_NA",
+            "field_name": "Type",
+            "field_filter_name": "dccp.type",
+            "field_type": "FT_UINT8",
+            "field_base": "BASE_DEC",
+            "field_options_value": "VALS(dccp_packet_type_vals)",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_x",
+            "field_vari_name": "dccph->x",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_bit_length": "0x01",
+            "field_endian": "ENC_NA",
+            "field_name": "Extended Sequence Numbers",
+            "field_filter_name": "dccp.x",
+            "field_type": "FT_BOOLEAN",
+            "field_base": "BASE_NONE",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_identifier": "hf_dccp_seq",
+            "field_vari_name": " dccph->seq",
+            "field_offset": "offset",
+            "field_length": 3,
+            "if_dependence": [
+                [
+                    "dccph->x",
+                    "false"
+                ]
+            ],
+            "field_name": "Sequence Number",
+            "field_filter_name": "dccp.seq",
+            "field_type": "FT_UINT64",
+            "field_base": "BASE_DEC",
+            "field_options_value": "NULL",
+            "field_flags": "0x0",
+            "field_display_filter": "NULL",
+            "field_macro_for_structure_filling": "HFILL"
+        },
+        {
+            "field_name": "There is no Field!",
+            "switch_dependence": [
+                "dccph->type"
+            ],
+            "switch_dependence_value": []
+        },
+        {
+            "field_identifier": "data_type_field",
+            "field_name": "data_type_field",
+            "field_type": "value of option_len",
+            "field_length": 1
+        }
+    ]
+]

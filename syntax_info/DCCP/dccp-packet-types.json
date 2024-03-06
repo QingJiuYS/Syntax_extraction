@@ -1,0 +1,1101 @@
+[
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Service Code",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Service Code",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reset Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Data 1",
+            "field_offset": "offset + 1",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Data 2",
+            "field_offset": "offset + 2",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Data 3",
+            "field_offset": "offset + 3",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Service Code",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Service Code",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reset Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Data 1",
+            "field_offset": "offset + 1",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Data 2",
+            "field_offset": "offset + 2",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Data 3",
+            "field_offset": "offset + 3",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Source Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination Port",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data Offset",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CCVal",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum Coverage",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Type",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Extended Sequence Numbers",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_NA"
+        }
+    ]
+]
