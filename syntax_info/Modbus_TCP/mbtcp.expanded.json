@@ -1,0 +1,4908 @@
+[
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_exceptioncode",
+                "field_vari_name": "exception_code",
+                "field_offset": "payload_start",
+                "field_length": 1,
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "true"
+                    ]
+                ],
+                "field_endian": "ENC_NA",
+                "field_name": "Exception Code",
+                "field_filter_name": "modbus.exception_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(exception_code_vals)",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_COILS",
+                    "READ_DISCRETE_INPUTS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_bitcnt",
+                "field_offset": "payload_start + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_COILS",
+                    "READ_DISCRETE_INPUTS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Bit Count",
+                "field_filter_name": "modbus.bit_cnt",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_HOLDING_REGS",
+                    "READ_INPUT_REGS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_wordcnt",
+                "field_offset": "payload_start + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_HOLDING_REGS",
+                    "READ_INPUT_REGS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Word Count",
+                "field_filter_name": "modbus.word_cnt",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_data",
+                "field_offset": "payload_start",
+                "field_length": "value of reported_len",
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ],
+                    [
+                        "payload_len != reported_len",
+                        "true"
+                    ]
+                ],
+                "field_name": "Data",
+                "field_filter_name": "modbus.data",
+                "field_type": "FT_BYTES",
+                "field_base": "BASE_NONE",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "data_type_field",
+                "field_name": "data_type_field",
+                "field_type": 1,
+                "field_length": "value of payload_len",
+                "switch_dependence": [
+                    "function_code",
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL",
+                    "/",
+                    "READ_COILS",
+                    "READ_DISCRETE_INPUTS"
+                ]
+            }
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_padding",
+                "field_offset": "payload_start + 3",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Padding",
+                "field_filter_name": "modbus.padding",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_HEX",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_data",
+                "field_offset": "payload_start",
+                "field_length": "value of reported_len",
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ],
+                    [
+                        "payload_len != reported_len",
+                        "true"
+                    ]
+                ],
+                "field_name": "Data",
+                "field_filter_name": "modbus.data",
+                "field_type": "FT_BYTES",
+                "field_base": "BASE_NONE",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "data_type_field",
+                "field_name": "data_type_field",
+                "field_type": "value of payload_len",
+                "field_length": 1,
+                "switch_dependence": [
+                    "function_code",
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL",
+                    "/",
+                    "READ_HOLDING_REGS",
+                    "READ_INPUT_REGS",
+                    "WRITE_MULT_REGS"
+                ]
+            }
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_padding",
+                "field_offset": "payload_start + 3",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Padding",
+                "field_filter_name": "modbus.padding",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_HEX",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_data",
+                "field_offset": "payload_start",
+                "field_length": "value of reported_len",
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ],
+                    [
+                        "payload_len != reported_len",
+                        "true"
+                    ]
+                ],
+                "field_name": "Data",
+                "field_filter_name": "modbus.data",
+                "field_type": "FT_BYTES",
+                "field_base": "BASE_NONE",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_data",
+                "field_offset": "payload_start",
+                "field_length": "value of payload_len",
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code",
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL",
+                    "/",
+                    ""
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ],
+                    [
+                        "! dissector_try_string(modbus_data_dissector_table, \"data\", next_tvb, pinfo, tree, NULL)",
+                        "true"
+                    ]
+                ],
+                "field_name": "Data",
+                "field_filter_name": "modbus.data",
+                "field_type": "FT_BYTES",
+                "field_base": "BASE_NONE",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_padding",
+                "field_offset": "payload_start + 3",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Padding",
+                "field_filter_name": "modbus.padding",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_HEX",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "data_type_field",
+                "field_name": "data_type_field",
+                "field_type": 1,
+                "field_length": "value of payload_len",
+                "switch_dependence": [
+                    "function_code",
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL",
+                    "/",
+                    "READ_COILS",
+                    "READ_DISCRETE_INPUTS"
+                ]
+            }
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_padding",
+                "field_offset": "payload_start + 3",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Padding",
+                "field_filter_name": "modbus.padding",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_HEX",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "data_type_field",
+                "field_name": "data_type_field",
+                "field_type": "value of payload_len",
+                "field_length": 1,
+                "switch_dependence": [
+                    "function_code",
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL",
+                    "/",
+                    "READ_HOLDING_REGS",
+                    "READ_INPUT_REGS",
+                    "WRITE_MULT_REGS"
+                ]
+            }
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_padding",
+                "field_offset": "payload_start + 3",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Padding",
+                "field_filter_name": "modbus.padding",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_HEX",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_data",
+                "field_offset": "payload_start",
+                "field_length": "value of payload_len",
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code",
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL",
+                    "/",
+                    ""
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ],
+                    [
+                        "! dissector_try_string(modbus_data_dissector_table, \"data\", next_tvb, pinfo, tree, NULL)",
+                        "true"
+                    ]
+                ],
+                "field_name": "Data",
+                "field_filter_name": "modbus.data",
+                "field_type": "FT_BYTES",
+                "field_base": "BASE_NONE",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_padding",
+                "field_offset": "payload_start + 3",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_COIL"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Padding",
+                "field_filter_name": "modbus.padding",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_HEX",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_SINGLE_REG"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_name": "There is no Field!",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_EXCEPT_STAT"
+                ]
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_diag_sf",
+                "field_vari_name": "diagnostic_code",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "DIAGNOSTICS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Diagnostic Code",
+                "field_filter_name": "modbus.diagnostic_code",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(diagnostic_code_vals)",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_diag_return_query_data_request",
+                "field_offset": "payload_start+2",
+                "field_length": "value of payload_len-2",
+                "field_endian": "ENC_NA",
+                "switch_dependence": [
+                    "function_code",
+                    "diagnostic_code"
+                ],
+                "switch_dependence_value": [
+                    "DIAGNOSTICS",
+                    "/",
+                    "RETURN_QUERY_DATA"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ],
+                    [
+                        "payload_len > 2",
+                        "true"
+                    ]
+                ],
+                "field_name": "Request Data",
+                "field_filter_name": "modbus.diagnostic.return_query_data.request",
+                "field_type": "FT_BYTES",
+                "field_base": "BASE_NONE",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_diag_sf",
+                "field_vari_name": "diagnostic_code",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "DIAGNOSTICS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Diagnostic Code",
+                "field_filter_name": "modbus.diagnostic_code",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(diagnostic_code_vals)",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_diag_restart_communication_option",
+                "field_offset": "payload_start+2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code",
+                    "diagnostic_code"
+                ],
+                "switch_dependence_value": [
+                    "DIAGNOSTICS",
+                    "/",
+                    "RESTART_COMMUNICATION_OPTION"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Restart Communication Option",
+                "field_filter_name": "modbus.diagnostic.restart_communication_option",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_HEX",
+                "field_options_value": "VALS(diagnostic_restart_communication_option_vals)",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_diag_sf",
+                "field_vari_name": "diagnostic_code",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "DIAGNOSTICS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Diagnostic Code",
+                "field_filter_name": "modbus.diagnostic_code",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(diagnostic_code_vals)",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_diag_ascii_input_delimiter",
+                "field_offset": "payload_start+2",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code",
+                    "diagnostic_code"
+                ],
+                "switch_dependence_value": [
+                    "DIAGNOSTICS",
+                    "/",
+                    "CHANGE_ASCII_INPUT_DELIMITER"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "CHAR",
+                "field_filter_name": "modbus.diagnostic.ascii_input_delimiter",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_HEX",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_diag_sf",
+                "field_vari_name": "diagnostic_code",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "DIAGNOSTICS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Diagnostic Code",
+                "field_filter_name": "modbus.diagnostic_code",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(diagnostic_code_vals)",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_MULT_COILS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_bitcnt",
+                "field_offset": "payload_start + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_MULT_COILS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Bit Count",
+                "field_filter_name": "modbus.bit_cnt",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_bytecnt",
+                "field_vari_name": "byte_cnt",
+                "field_offset": "payload_start + 4",
+                "field_length": 1,
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_MULT_COILS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Byte Count",
+                "field_filter_name": "modbus.byte_cnt",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_MULT_REGS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_wordcnt",
+                "field_offset": "payload_start + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_MULT_REGS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Word Count",
+                "field_filter_name": "modbus.word_cnt",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_bytecnt",
+                "field_vari_name": "byte_cnt",
+                "field_offset": "payload_start + 4",
+                "field_length": 1,
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_MULT_REGS"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Byte Count",
+                "field_filter_name": "modbus.byte_cnt",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_bytecnt",
+                "field_vari_name": "byte_cnt",
+                "field_offset": "payload_start",
+                "field_length": 1,
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_FILE_RECORD"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Byte Count",
+                "field_filter_name": "modbus.byte_cnt",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "data_type_field",
+                "field_name": "data_type_field",
+                "field_type": "7",
+                "field_length": "value of byte_cnt / 7",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_FILE_RECORD"
+                ]
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_bytecnt",
+                "field_vari_name": "byte_cnt",
+                "field_offset": "payload_start",
+                "field_length": 1,
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_FILE_RECORD"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Byte Count",
+                "field_filter_name": "modbus.byte_cnt",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "data_type_field",
+                "field_name": "data_type_field",
+                "field_type": "value of group_byte_cnt",
+                "field_length": "value of byte_cnt / value of group_byte_cnt",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "WRITE_FILE_RECORD"
+                ]
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "MASK_WRITE_REG"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_andmask",
+                "field_offset": "payload_start + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "MASK_WRITE_REG"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "AND mask",
+                "field_filter_name": "modbus.and_mask",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_HEX",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_ormask",
+                "field_offset": "payload_start + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "MASK_WRITE_REG"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "OR mask",
+                "field_filter_name": "modbus.or_mask",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_HEX",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_readref",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_WRITE_REG"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Read Reference Number",
+                "field_filter_name": "modbus.read_reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_readwordcnt",
+                "field_offset": "payload_start + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_WRITE_REG"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Read Word Count",
+                "field_filter_name": "modbus.read_word_cnt",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_writeref",
+                "field_offset": "payload_start + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_WRITE_REG"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Write Reference Number",
+                "field_filter_name": "modbus.write_reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_writewordcnt",
+                "field_offset": "payload_start + 6",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_WRITE_REG"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Write Word Count",
+                "field_filter_name": "modbus.write_word_cnt",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_bytecnt",
+                "field_vari_name": "byte_cnt",
+                "field_offset": "payload_start + 8",
+                "field_length": 1,
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_WRITE_REG"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Byte Count",
+                "field_filter_name": "modbus.byte_cnt",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_reference",
+                "field_offset": "payload_start",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "READ_FIFO_QUEUE"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Reference Number",
+                "field_filter_name": "modbus.reference_num",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_mei",
+                "field_offset": "payload_start",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "ENCAP_INTERFACE_TRANSP"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "MEI type",
+                "field_filter_name": "modbus.mei",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(encap_interface_code_vals)",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_read_device_id",
+                "field_offset": "payload_start+1",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code",
+                    "mei_code"
+                ],
+                "switch_dependence_value": [
+                    "ENCAP_INTERFACE_TRANSP",
+                    "/",
+                    "READ_DEVICE_ID"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Read Device ID",
+                "field_filter_name": "modbus.read_device_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(read_device_id_vals)",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_modbus_object_id",
+                "field_offset": "payload_start+2",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code",
+                    "mei_code"
+                ],
+                "switch_dependence_value": [
+                    "ENCAP_INTERFACE_TRANSP",
+                    "/",
+                    "READ_DEVICE_ID"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "Object ID",
+                "field_filter_name": "modbus.object_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(object_id_vals)",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_mei",
+                "field_offset": "payload_start",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "switch_dependence": [
+                    "function_code"
+                ],
+                "switch_dependence_value": [
+                    "ENCAP_INTERFACE_TRANSP"
+                ],
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ],
+                    [
+                        "exception_code != 0",
+                        "false"
+                    ],
+                    [
+                        "modbus_data->packet_type == QUERY_PACKET",
+                        "true"
+                    ]
+                ],
+                "field_name": "MEI type",
+                "field_filter_name": "modbus.mei",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(encap_interface_code_vals)",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_modbus_functioncode",
+                "field_vari_name": "function_code",
+                "field_offset": "offset",
+                "field_length": 1,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "if_dependence": [
+                    [
+                        "tvb_reported_length_remaining(tvb, offset) > 0",
+                        "true"
+                    ]
+                ],
+                "field_bit_length": "0x7F",
+                "field_name": "Function Code",
+                "field_filter_name": "modbus.func_code",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "VALS(function_code_vals)",
+                "field_flags": "0x7F",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ],
+    [
+        [
+            "ordinary",
+            {
+                "field_identifier": "hf_mbtcp_transid",
+                "field_vari_name": "transaction_id",
+                "field_offset": "offset",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Transaction Identifier",
+                "field_filter_name": "mbtcp.trans_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_protid",
+                "field_vari_name": "protocol_id",
+                "field_offset": "offset + 2",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Protocol Identifier",
+                "field_filter_name": "mbtcp.prot_id",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_len",
+                "field_vari_name": "len",
+                "field_offset": "offset + 4",
+                "field_length": 2,
+                "field_endian": "ENC_BIG_ENDIAN",
+                "field_name": "Length",
+                "field_filter_name": "mbtcp.len",
+                "field_type": "FT_UINT16",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            },
+            {
+                "field_identifier": "hf_mbtcp_unitid",
+                "field_vari_name": "unit_id",
+                "field_offset": "offset + 6",
+                "field_length": 1,
+                "field_endian": "ENC_NA",
+                "field_name": "Unit Identifier",
+                "field_filter_name": "mbtcp.unit_id",
+                "field_type": "FT_UINT8",
+                "field_base": "BASE_DEC",
+                "field_options_value": "NULL",
+                "field_flags": "0x0",
+                "field_display_filter": "NULL",
+                "field_macro_for_structure_filling": "HFILL"
+            }
+        ],
+        [
+            "return"
+        ],
+        [
+            "function_end"
+        ]
+    ]
+]
