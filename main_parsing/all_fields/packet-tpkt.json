@@ -1,0 +1,50 @@
+[
+    {
+        "field_identifier": "hf_tpkt_version",
+        "field_name": "Version",
+        "field_filter_name": "tpkt.version",
+        "field_type": "FT_UINT8",
+        "field_length": 1,
+        "field_base": "BASE_DEC",
+        "field_options_value": "NULL",
+        "field_flags": "0x0",
+        "field_display_filter": "Version",
+        "field_macro_for_structure_filling": "only version 3 is defined"
+    },
+    {
+        "field_identifier": "hf_tpkt_reserved",
+        "field_name": "Reserved",
+        "field_filter_name": "tpkt.reserved",
+        "field_type": "FT_UINT8",
+        "field_length": 1,
+        "field_base": "BASE_DEC",
+        "field_options_value": "NULL",
+        "field_flags": "0x0",
+        "field_display_filter": "Reserved",
+        "field_macro_for_structure_filling": "should be 0"
+    },
+    {
+        "field_identifier": "hf_tpkt_length",
+        "field_name": "Length",
+        "field_filter_name": "tpkt.length",
+        "field_type": "FT_UINT16",
+        "field_length": 2,
+        "field_base": "BASE_DEC",
+        "field_options_value": "NULL",
+        "field_flags": "0x0",
+        "field_display_filter": "Length of data unit",
+        "field_macro_for_structure_filling": "including this header"
+    },
+    {
+        "field_identifier": "hf_tpkt_continuation_data",
+        "field_name": "Continuation data",
+        "field_filter_name": "tpkt.continuation_data",
+        "field_type": "FT_BYTES",
+        "field_length": -1,
+        "field_base": "BASE_NONE",
+        "field_options_value": "NULL",
+        "field_flags": "0x0",
+        "field_display_filter": "NULL",
+        "field_macro_for_structure_filling": "HFILL"
+    }
+]
