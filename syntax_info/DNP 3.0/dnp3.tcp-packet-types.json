@@ -1,0 +1,2645 @@
+[
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Bit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Frame Count Valid",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Application Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Transport Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Start Bytes",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Direction",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Primary",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Flow Control",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Control Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Destination",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Source",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_LITTLE_ENDIAN"
+        },
+        {
+            "field_name": "Data Link Header checksum",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_LITTLE_ENDIAN"
+        }
+    ]
+]

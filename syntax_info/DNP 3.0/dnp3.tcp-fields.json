@@ -1,0 +1,18 @@
+[
+    "hf_dnp3_start",
+    "hf_dnp3_len",
+    "hf_dnp3_ctl",
+    "hf_dnp3_ctl_dir",
+    "hf_dnp3_ctl_prm",
+    "hf_dnp3_ctl_fcb",
+    "hf_dnp3_ctl_fcv",
+    "hf_dnp3_ctl_prifunc",
+    "hf_dnp3_dst",
+    "hf_dnp3_src",
+    "hf_dnp3_data_hdr_crc",
+    "hf_dnp3_tr_ctl",
+    "data_type_field",
+    "hf_dnp3_al_ctl",
+    "hf_dnp3_ctl_dfc",
+    "hf_dnp3_ctl_secfunc"
+]
