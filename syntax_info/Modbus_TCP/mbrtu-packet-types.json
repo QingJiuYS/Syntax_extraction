@@ -1,0 +1,693 @@
+[
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Exception Code",
+            "field_offset": "payload_start",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reference Number",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Bit Count",
+            "field_offset": "payload_start + 2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reference Number",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Word Count",
+            "field_offset": "payload_start + 2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reference Number",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Data",
+            "field_offset": "payload_start",
+            "field_length": "value of reported_len",
+            "field_type": "FT_BYTES",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Data",
+            "field_offset": "payload_start",
+            "field_length": "value of payload_len",
+            "field_type": "FT_BYTES",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Padding",
+            "field_offset": "payload_start + 3",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reference Number",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Diagnostic Code",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Request Data",
+            "field_offset": "payload_start+2",
+            "field_length": "value of payload_len-2",
+            "field_type": "FT_BYTES",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Diagnostic Code",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Restart Communication Option",
+            "field_offset": "payload_start+2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Diagnostic Code",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "CHAR",
+            "field_offset": "payload_start+2",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Diagnostic Code",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reference Number",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Bit Count",
+            "field_offset": "payload_start + 2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reference Number",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Word Count",
+            "field_offset": "payload_start + 2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reference Number",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "AND mask",
+            "field_offset": "payload_start + 2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "OR mask",
+            "field_offset": "payload_start + 4",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Read Reference Number",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Read Word Count",
+            "field_offset": "payload_start + 2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Write Reference Number",
+            "field_offset": "payload_start + 4",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Write Word Count",
+            "field_offset": "payload_start + 6",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reference Number",
+            "field_offset": "payload_start",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "MEI type",
+            "field_offset": "payload_start",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Read Device ID",
+            "field_offset": "payload_start+1",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Object ID",
+            "field_offset": "payload_start+2",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "MEI type",
+            "field_offset": "payload_start",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Unit ID",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "CRC-16",
+            "field_offset": "len-2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": " ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Function Code",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ]
+]
