@@ -1,0 +1,25 @@
+[
+    [
+        {
+            "field_name": "Version",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reserved",
+            "field_offset": "offset + 1",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Length",
+            "field_offset": "offset + 2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ]
+]
