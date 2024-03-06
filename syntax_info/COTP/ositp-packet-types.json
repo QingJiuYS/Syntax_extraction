@@ -1,0 +1,1069 @@
+[
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Source reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset +  2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Source reference",
+            "field_offset": "offset +  4",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Cause",
+            "field_offset": "offset + 6",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Last data unit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_BOOLEAN",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Credit",
+            "field_offset": "offset +  1",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset +  2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset + 4",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Credit",
+            "field_offset": "offset +  1",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset +  2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset + 4",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Credit",
+            "field_offset": "offset +  1",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset +  2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset + 4",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Credit",
+            "field_offset": "offset +  1",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset +  2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset + 4",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Credit",
+            "field_offset": "offset +  1",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset +  2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset + 4",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Source reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Credit",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        },
+        {
+            "field_name": "Credit",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 4,
+            "field_type": "FT_UINT32",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Your TPDU number",
+            "field_offset": "offset",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    [
+        {
+            "field_name": "Destination reference",
+            "field_offset": "offset +  2",
+            "field_length": 2,
+            "field_type": "FT_UINT16",
+            "field_endian": "ENC_BIG_ENDIAN"
+        },
+        {
+            "field_name": "Reject cause",
+            "field_offset": "offset + 4",
+            "field_length": 1,
+            "field_type": "FT_UINT8",
+            "field_endian": "ENC_NA"
+        }
+    ],
+    []
+]

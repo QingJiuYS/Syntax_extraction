@@ -1,0 +1,19 @@
+[
+    "hf_cotp_li",
+    "hf_cotp_type",
+    "hf_cotp_destref",
+    "hf_cotp_srcref",
+    "data_type_field",
+    "hf_cotp_cause",
+    "hf_cotp_tpdu_number_extended",
+    "hf_cotp_eot_extended",
+    "hf_cotp_tpdu_number",
+    "hf_cotp_eot",
+    "hf_cotp_credit_cdt",
+    "hf_cotp_next_tpdu_number",
+    "hf_cotp_next_tpdu_number_extended",
+    "hf_cotp_credit",
+    "hf_cotp_reject_cause",
+    "hf_cltp_li",
+    "hf_cltp_type"
+]
