@@ -1,0 +1,51 @@
+[
+    {
+        "file_name": "packet-dccp.c",
+        "proto_handle": "proto_dccp",
+        "proto_name": "Datagram Congestion Control Protocol",
+        "short_name": "DCCP",
+        "identifier_name": "dccp"
+    },
+    {
+        "file_name": "packet-dnp.c",
+        "proto_handle": "proto_dnp3",
+        "proto_name": "Distributed Network Protocol 3.0",
+        "short_name": "DNP 3.0",
+        "identifier_name": "dnp3"
+    },
+    {
+        "file_name": "packet-mbtcp.c",
+        "proto_handle": "proto_mbtcp",
+        "proto_name": "Modbus/TCP",
+        "short_name": "Modbus/TCP",
+        "identifier_name": "mbtcp"
+    },
+    {
+        "file_name": "packet-mbtcp.c",
+        "proto_handle": "proto_mbudp",
+        "proto_name": "Modbus/UDP",
+        "short_name": "Modbus/UDP",
+        "identifier_name": "mbudp"
+    },
+    {
+        "file_name": "packet-mbtcp.c",
+        "proto_handle": "proto_mbrtu",
+        "proto_name": "Modbus RTU",
+        "short_name": "Modbus RTU",
+        "identifier_name": "mbrtu"
+    },
+    {
+        "file_name": "packet-mbtcp.c",
+        "proto_handle": "proto_modbus",
+        "proto_name": "Modbus",
+        "short_name": "Modbus",
+        "identifier_name": "modbus"
+    },
+    {
+        "file_name": "packet-s7comm.c",
+        "proto_handle": "proto_s7comm",
+        "proto_name": "S7 Communication",
+        "short_name": "S7COMM",
+        "identifier_name": "s7comm"
+    }
+]
