@@ -11,11 +11,11 @@ def custom_encoder(obj):
     return obj
 
 
-def improve_relation(dissect_list):
-    for dissect in dissect_list:
+def improve_relation(dissect_table):
+    for dissect in dissect_table:
         if dissect['lower'] not in ['tcp', 'udp', None] and dissect['type'] == 'global':
             if dissect['upper'] != []:
-                for dissect_tar in dissect_list:
+                for dissect_tar in dissect_table:
                     for dissect_name in dissect['upper']:
                         if dissect_tar['dissect_name'] == dissect_name:
                             dissect_tar['lower'] = dissect['proto_identifier_name']
@@ -31,24 +31,24 @@ def extract_parameter(line):
     return content
     
 
-def save_port_info_to_dissect_list(dissect_code, this_dissect):
+def save_port_info_to_dissect_table(dissect_code, this_dissect):
     content = extract_parameter(dissect_code)
     port_type = content[0].strip().strip('"').strip()
     port_num = content[1].strip()
     dissect_handle = content[2].strip()
-    print('port_type = ', port_type)
-    print('port_num = ', port_num)
-    print('dissect_handle = ', dissect_handle)
+    # print('port_type = ', port_type)
+    # print('port_num = ', port_num)
+    # print('dissect_handle = ', dissect_handle)
     for dissector in this_dissect:
-        print(dissector)
+        # print(dissector)
         if 'dissect_handle' in dissector and dissector['dissect_handle'] == dissect_handle:
             dissector['port_num'] = port_num
             dissector['port_type'] = port_type
 
 
-def save_dissect_to_list(dissect_code, this_dissect, dissect_all, proto_list):
+def save_dissect_to_list(dissect_code, this_dissect, dissect_all, proto_table):
     content = extract_parameter(dissect_code)
-    print(content)
+    # print(content)
     lower = content[0].strip().strip('"').strip()
     dissect_func_name = content[1].strip().strip('"').strip()
     proto_description = content[2].strip().strip('"').strip()
@@ -66,7 +66,7 @@ def save_dissect_to_list(dissect_code, this_dissect, dissect_all, proto_list):
         }
     dissect_all.append(dissect_func_name)
 
-    for proto in proto_list:
+    for proto in proto_table:
         if dissect_info["proto_handle"] == proto["proto_handle"]:
             dissect_info["proto_name"] = proto["proto_name"]
             dissect_info["proto_identifier_name"] = proto["identifier_name"]
@@ -75,7 +75,7 @@ def save_dissect_to_list(dissect_code, this_dissect, dissect_all, proto_list):
             break
 
 
-def extract_dissect_info(proto_list, code, this_dissect, dissect_all, tag):
+def extract_dissect_info(proto_table, code, this_dissect, dissect_all, tag):
     dissect_handle = ''
 
     content = extract_param(code)
@@ -117,7 +117,7 @@ def extract_dissect_info(proto_list, code, this_dissect, dissect_all, tag):
         }
         dissect_all.append(dissect_func_name)
         
-    for proto in proto_list:
+    for proto in proto_table:
         if dissect_info["proto_handle"] == proto["proto_handle"]:
             dissect_info["proto_name"] = proto["proto_name"]
             dissect_info["proto_identifier_name"] = proto["identifier_name"]
@@ -137,7 +137,7 @@ def extract_param(line):
     return content
 
 
-def extract_proto_info(file_name, code, proto_list):
+def extract_proto_info(file_name, code, proto_table):
     proto_names = {}
     proto_handle = ''
     proto_handle = code.split('=')[0].strip()
@@ -146,10 +146,10 @@ def extract_proto_info(file_name, code, proto_list):
     long_name = content[0].strip(' "').strip()
     short_name = content[1].strip(' "').strip()
     identifier_name = content[2].strip(' "').strip()
-    print("content = ", content)
-    print("content[0] = ", long_name)
-    print("content[1] = ", short_name)
-    print("content[2] = ", identifier_name)
+    # print("content = ", content)
+    # print("content[0] = ", long_name)
+    # print("content[1] = ", short_name)
+    # print("content[2] = ", identifier_name)
     proto_names = {
         "long_name": long_name,
         "short_name": short_name,
@@ -162,7 +162,7 @@ def extract_proto_info(file_name, code, proto_list):
         "short_name": short_name,
         "identifier_name": identifier_name
     }
-    proto_list.append(proto_info)
+    proto_table.append(proto_info)
     return proto_names, proto_handle
 
 def extract_chunck(register_body, code_name):
@@ -313,26 +313,24 @@ def remove_comments(source_file_path, new_file_path):
         print(f"An error occurred: {e}")
 
 
-def pre_process(directory, current_path, proto_list_path, dissect_list_path):
+def process(directory, system_dir):
     
-    start_time = time.time()
-
-    proto_list = []
-    dissect_list = []
+    proto_table = []
+    dissect_table = []
     dissect_all = []
     num = 0
     for root, dirs, files in os.walk(directory):
         for file_name in files:
-            if file_name.startswith("packet-") and file_name.endswith(".c") and not file_name.endswith("-template.c"):
+            # if file_name.startswith("packet-") and file_name.endswith(".c") and not file_name.endswith("-template.c"):
             # if file_name == ("packet-mbtcp.c"):
-            # if file_name == ("packet-dccp.c"):
+            if file_name == ("packet-dccp.c"):
             # if file_name == ("packet-dnp.c"):
             # if file_name == ("packet-s7comm.c"):
             # if file_name == ("packet-ositp.c"):
             # if file_name == ("packet-tpkt.c"):
                 source_file_path = os.path.join(root, file_name)
                 num += 1
-                new_file_path = os.path.join(current_path,'pre_process', 'proto_files', file_name)
+                new_file_path = os.path.join(system_dir,'pre_process', 'proto_files', file_name)
                 os.makedirs(os.path.dirname(new_file_path), exist_ok=True)
 
                 remove_comments(source_file_path, new_file_path) 
@@ -344,7 +342,7 @@ def pre_process(directory, current_path, proto_list_path, dissect_list_path):
                     register_code = extract_chunck(lines, "proto_register_protocol")
                     if register_code:
                         for proto in register_code:
-                            proto_names, proto_handle = extract_proto_info(file_name, proto, proto_list)
+                            proto_names, proto_handle = extract_proto_info(file_name, proto, proto_table)
 
                     # global
                     dissector_global = extract_chunck(lines, "register_dissector")
@@ -353,7 +351,7 @@ def pre_process(directory, current_path, proto_list_path, dissect_list_path):
 
 
                         for dissect in dissector_global:
-                            dissect_handle = extract_dissect_info(proto_list, dissect, this_dissect, dissect_all, True)
+                            dissect_handle = extract_dissect_info(proto_table, dissect, this_dissect, dissect_all, True)
                             
                     # local
                     dissector_local = extract_chunck(lines, "create_dissector_handle")
@@ -366,18 +364,18 @@ def pre_process(directory, current_path, proto_list_path, dissect_list_path):
                                 code =  match.group()
                             else:
                                 code = None
-                            dissect_handle = extract_dissect_info(proto_list, dissect, this_dissect, dissect_all, False)
+                            dissect_handle = extract_dissect_info(proto_table, dissect, this_dissect, dissect_all, False)
 
                     dissector_upper = extract_chunck(lines, "heur_dissector_add")
                     if dissector_upper:
                         for dissect in dissector_upper:
-                            save_dissect_to_list(dissect, this_dissect, dissect_all, proto_list)
+                            save_dissect_to_list(dissect, this_dissect, dissect_all, proto_table)
                         dissector_upper = []
 
                     dissector_port = extract_chunck(lines, "dissector_add_uint_with_preference")
                     if dissector_port:
                         for dissect in dissector_port:
-                            save_port_info_to_dissect_list(dissect, this_dissect)
+                            save_port_info_to_dissect_table(dissect, this_dissect)
                         dissector_port = []
 
                     dissector_lower = extract_chunck(lines, "find_dissector")
@@ -390,40 +388,40 @@ def pre_process(directory, current_path, proto_list_path, dissect_list_path):
                                 dissector['upper'] = [upper]
 
                     for dissect in this_dissect:
-                        dissect_list.append(dissect)
+                        dissect_table.append(dissect)
                     this_dissect = []
 
-
     # improve relation
-    improve_relation(dissect_list)
+    improve_relation(dissect_table)
 
-    with open(proto_list_path, 'w', encoding='utf-8') as file:
-        json.dump(proto_list, file, indent=4, default = custom_encoder)
-    with open(dissect_list_path, 'w', encoding='utf-8') as file:
-        json.dump(dissect_list, file, indent=4, default = custom_encoder) 
-
-                    
-    # end time
-    end_time = time.time()
-    run_time = end_time - start_time
-    print(f"pre-process time:{run_time:.2f} 秒")
-    print("protocl number：", num)
-    return proto_list, dissect_list, dissect_all
+    return proto_table, dissect_table
 
 
-def main():
+# Pre_processing module
+def pre_process():
+        # Wireshark protocol dissector files
         directory_path = "C:/Users/lhs/Desktop/wireshark/epan/dissectors"
-        current_path = os.path.dirname(os.path.abspath(__file__))
-               
-        pre_process_dir = os.path.join(current_path,'pre_process')
+
+        # system directory
+        system_dir = os.path.dirname(os.path.abspath(__file__))
+
+        # pre_process directory
+        pre_process_dir = os.path.join(system_dir, 'pre_process')
         if not os.path.exists(pre_process_dir):
             os.makedirs(pre_process_dir)
 
-        proto_list_path = os.path.join(pre_process_dir, 'proto_list.json')
-        dissect_list_path = os.path.join(pre_process_dir, 'dissect_list.json')
+        # process the dissector files, generate proto table and dissect table
+        proto_table, dissect_table = process(directory_path, system_dir)
 
-        proto_list, dissect_list, proto_dissect_map = pre_process(directory_path, current_path, proto_list_path, dissect_list_path)
+        # "proto table" and "dissect table"
+        # write to json file, under "pre_process" directory
+        proto_table_path = os.path.join(pre_process_dir, 'proto_table.json')
+        dissect_table_path = os.path.join(pre_process_dir, 'dissect_table.json')
+        with open(proto_table_path, 'w', encoding='utf-8') as file:
+            json.dump(proto_table, file, indent=4, default = custom_encoder)
+        with open(dissect_table_path, 'w', encoding='utf-8') as file:
+            json.dump(dissect_table, file, indent=4, default = custom_encoder) 
 
 
 if __name__ == "__main__":
-    main()
+    pre_process()
