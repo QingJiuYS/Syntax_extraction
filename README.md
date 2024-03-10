@@ -16,7 +16,7 @@ The script consists of the following steps:
 Step 1: Pre_process
 -------------------
 
-In this step, We preprocess all protocol dissector files and store the processed content under `pre_process/proto_files/`. Extract the names and dissector information for all protocols, and generate the `proto_table` and `dissect_table` under `pre_process/`.
+In this step, We preprocess all protocol dissector files and store the processed content under `pre_process/proto_files/`. Extract all names and dissector information of all protocols, and generate the `proto_table` and `dissect_table` under `pre_process/`.
 
 This step can be performed with the following command:
 
