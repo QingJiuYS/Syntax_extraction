@@ -1,7 +1,7 @@
 General Information
 -------------------
 
-Extract protocol syntax information by parsing Wireshark protocol dissector files.
+Extract protocol syntax information by parsing Wireshark protocol dissector files
 
 Requirements
 -------------------
@@ -25,6 +25,7 @@ python syntax_extraction/syntax_main.py - p DIR
 ~~~
 
 Wherein, `DIR` is the local directory of the Wireshark protocol dissector files, please replace `DIR` with actual directory of the dissector files in order to perform this step correctly.
+
 Wireshark protocol dissector file is officially provided by Wireshark and can be found at:
 https://github.com/wireshark/wireshark/tree/master/epan/dissectors
 
