@@ -33,15 +33,12 @@ Step 2: Main_parsing
 
 In this step, We parsing the target protocol and extract the protocol syntax information.
 First, the target protocol is selected through a selector, and then start parsing, 
-Output standard file under `main_parsing/standard_files/`
-Output standard fields under `main_parsing/standard_fields/`
-Output syntax infortation under `syntax_info/`
+Output standard file under `main_parsing/standard_files/`, output standard fields under `main_parsing/standard_fields/`, and output syntax infortation under `syntax_info/`
 
 This step can be performed with the following command:
 
 ~~~
 python syntax_extraction/syntax_main.py - m
-
 ~~~
 
 Note that this step requires the preprocessed file of the target protocol under `pre_process/proto_files/`, and `proto_table` and `dissect_table` under `pre_process/`.
