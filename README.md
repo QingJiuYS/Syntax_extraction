@@ -21,12 +21,12 @@ In this step, We preprocess all protocol dissector files and store the processed
 This step can be performed with the following command:
 
 ~~~
-python syntax_extraction/syntax_main.py - p
+python syntax_extraction/syntax_main.py - p DIR
 ~~~
 
-Note that this step requires that all the protocol dissector files under `dissector_files`. Please check the files exist. The protocol dissector file is officially provided by Wireshark and can be found at:
+Wherein, `DIR` is the local directory of the Wireshark protocol dissector files, please replace `DIR` with actual directory of the dissector files in order to perform this step correctly.
+Wireshark protocol dissector file is officially provided by Wireshark and can be found at:
 https://github.com/wireshark/wireshark/tree/master/epan/dissectors
-
 
 Step 2: Main_parsing
 -------------------
