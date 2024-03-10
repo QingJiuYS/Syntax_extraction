@@ -25,10 +25,8 @@ python syntax_extraction/syntax_main.py - p
 ~~~
 
 Note that this step requires that all the protocol dissector files under `dissector_files`. Please check the files exist. The protocol dissector file is officially provided by Wireshark and can be found at:
-
-~~~
 https://github.com/wireshark/wireshark/tree/master/epan/dissectors
-~~~
+
 
 Step 2: Main_parsing
 -------------------
