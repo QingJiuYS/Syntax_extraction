@@ -397,11 +397,8 @@ def process(directory, system_dir):
     return proto_table, dissect_table
 
 
-# Pre_processing module
-def pre_process():
-        # Wireshark protocol dissector files
-        directory_path = "C:/Users/lhs/Desktop/wireshark/epan/dissectors"
-
+# Pre_processing module, "dissector_file_dir" is the directory of Wireshark protocol dissector files
+def pre_process(dissector_file_dir):
         # system directory
         system_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -411,7 +408,7 @@ def pre_process():
             os.makedirs(pre_process_dir)
 
         # process the dissector files, generate proto table and dissect table
-        proto_table, dissect_table = process(directory_path, system_dir)
+        proto_table, dissect_table = process(dissector_file_dir, system_dir)
 
         # "proto table" and "dissect table"
         # write to json file, under "pre_process" directory
@@ -424,4 +421,6 @@ def pre_process():
 
 
 if __name__ == "__main__":
-    pre_process()
+    # Wireshark protocol dissector files
+    dissector_file_dir = "C:/XXX/wireshark/epan/dissectors"
+    pre_process(dissector_file_dir)
