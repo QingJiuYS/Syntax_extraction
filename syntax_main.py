@@ -18,7 +18,8 @@ def main(args):
     # Pre_processing, dest is the directory of Wireshark protocol dissector files
     parser.add_argument('--pre_process', '-p', type=str, default=None, help="Input the directory path for pre-processing")
     # Main_parsing
-    parser.add_argument('--main_parsing', '-m')
+    # parser.add_argument('--main_parsing', '-m')
+    parser.add_argument('--main_parsing', '-m', action='store_true', help="Enable main parsing")
     args = vars(parser.parse_args(args[1:]))
 
     time_start = time.time()
@@ -32,7 +33,11 @@ def main(args):
         if not os.path.exists(pre_processing_dir):
             os.mkdir(pre_processing_dir) 
 
+        pre_process_start = time.time()
         pre_process(source_file_dir)
+        pre_process_end = time.time()
+
+        print("Pre_processing time: " + str(pre_process_end - pre_process_start))
 
     # Main_parsing
     if args['main_parsing']:
@@ -44,11 +49,14 @@ def main(args):
         # Select protocol 
         proto_name, dissect_name = select_protocol()    
 
+        main_parsing_start = time.time()
         main_parsing(proto_name, dissect_name)
+        main_parsing_end = time.time()
+        print("Main_parsing time: " + str(main_parsing_end - main_parsing_start))
 
-    print("--------------------------------------")
-    print("Process time: " + str(time.time() - time_start))
-    print("--------------------------------------")
+    # print("--------------------------------------")
+    # print("Process time: " + str(time.time() - time_start))
+    # print("--------------------------------------")
 
 
 if __name__ == "__main__":
